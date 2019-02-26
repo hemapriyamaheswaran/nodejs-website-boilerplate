@@ -1,0 +1,8 @@
+---
+- hosts: centos
+  become: True
+  tasks:
+    - name: installing nodejs
+      yum: name=nodejs update_cache=yes
+  vars:
+    nodejs_version: "6.0.0"
