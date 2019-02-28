@@ -31,4 +31,11 @@
 
     - name: Ensure Node.js app folder exists.
       file: "path={{ node_apps_location }} state=directory"
+    - name: Clone a private repository
+      git:
+        name: "https://github.com/hemapriyamaheswaran/nodejs-website-boilerplate.git"
+        version: master
+        dest: /opt/private-repo
+        accept_hostkey: yes
+
 
